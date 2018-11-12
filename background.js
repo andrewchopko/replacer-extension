@@ -12,13 +12,4 @@ chrome.runtime.onInstalled.addListener(function() {
       ]
     }]);
   });
-  
-  chrome.pageAction.onClicked.addListener(function(){
-    chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
-      chrome.pageAction.setIcon({ tabId: tabs[0].id, path: 'images/icon-active.png' });
-      chrome.tabs.executeScript(tabs[0].id, { 
-        file: 'extension.js'
-      });
-    });
-  });
 });
