@@ -1,0 +1,26 @@
+{
+	"manifest_version": 2,
+	"name": "Replacer",
+	"version": "1.0",
+	"description": "Extension for displaying trending github repos and search by them.",
+	"icons": {
+		"16": "images/icon.png",
+		"48": "images/icon.png",
+		"128": "images/icon.png"
+	},
+	"background": {
+		"scripts": ["background.js"],
+		"persistent": false
+	},
+	"permissions": [
+		"declarativeContent",
+		"activeTab",
+		"tabs",
+		"http://*/*", 
+		"https://*/*"
+	],
+	"page_action": {
+		"default_icon": "images/icon.png",
+		"default_title": "Replacer"
+	}
+}
